@@ -1,0 +1,22 @@
+{
+    "data": [
+        {
+            "year": "2017",
+            "pub": "IJCAI'17",
+            "model": "DeepFM",
+            "logloss": "0.0000",
+            "auc": "0.5633",
+            "link": "https://xx",
+            "contr": "5421"
+        },
+        {
+            "year": "2017",
+            "pub": "IJCAI'17",
+            "model": "DeepFM",
+            "logloss": "0.0000",
+            "auc": "0.5633",
+            "link": "https://xx",
+            "contr": "5421"
+        }
+    ]
+}
