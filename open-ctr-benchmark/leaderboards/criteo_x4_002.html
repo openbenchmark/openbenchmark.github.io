@@ -47,9 +47,6 @@
 <a href="#">MicroVideo-1.7M</a>
 </li>
 <li>
-<a href="#">KDDCup-2012</a>
-</li>
-<li>
 <a href="#">Frappe</a>
 </li>
 <li>
@@ -61,30 +58,36 @@
 <a href="#LeadBoard" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">LeaderBoards</a>
 <ul class="collapse list-unstyled" id="LeadBoard">
 <li>
-<a href="./criteo_x4.html">criteo_x4</a>
+<a href="./criteo_x4_001.html">criteo_x4_001</a>
 </li>
 <li>
-<a href="#">criteo_x0</a>
+<a href="./criteo_x4_002.html">criteo_x4_002</a>
 </li>
 <li>
-<a href="#">avazu_x4</a>
+<a href="#">criteo_x0_001</a>
 </li>
 <li>
-<a href="#">avazu_x0</a>
+<a href="./avazu_x4_001.html">avazu_x4_001</a>
 </li>
 <li>
-<a href="#">kkbox_x4</a>
+<a href="./avazu_x4_002.html">avazu_x4_002</a>
 </li>
 <li>
-<a href="#">taobao_x0</a>
+<a href="#">avazu_x0_001</a>
 </li>
 <li>
-<a href="#">microvideo_1.7m_x0</a>
+<a href="#">kkbox_x4_001</a>
+</li>
+<li>
+<a href="#">taobao_x0_001</a>
+</li>
+<li>
+<a href="#">microvideo1.7m_x0_001</a>
 </li>
 </ul>
 </li>
 <li>
-<a href="#">Contributors</a>
+<a href="#">Call for Contributions</a>
 </li>
 <li>
 <a href="#Links" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Related Links</a>
@@ -111,7 +114,7 @@
 </nav>
 
 <div id="content" class="p-4 p-md-5 pt-5">
-<h2 class="mb-4">Benchmarking on criteo_x4</h2>
+<h2 class="mb-4">Benchmarking on criteo_x4_002</h2>
 <p>Welecome to the open benchmarking site for CTR prediction.</p>
 
 <!-- Add data table -->
@@ -131,8 +134,10 @@
 <script type="text/javascript">
   $(document).ready(function () {
     $('#table1').DataTable({
+      "pageLength": 10,
+      "lengthMenu": [[10, 20, 50, -1], [10, 20, 50, "All"]],
       "ajax": {
-        "url": "../json/criteo_x4.json",
+        "url": "https://raw.githubusercontent.com/xue-pai/Open-CTR-Benchmark/master/results/criteo_x4_002.json",
         "dataSrc": "data"
       },
       "columnDefs": [
@@ -142,7 +147,18 @@
         {
             if (type === 'display')
             {
-                data = '<a href=' + encodeURIComponent(data) + '>Link</a>';
+                data = '<a href=' + data + '>Link</a>';
+            }
+            return data;
+        }
+      },
+      {
+        "targets": 6,
+        render: function (data, type, row, meta)
+        {
+            if (type === 'display')
+            {
+                data = '<a href=https://github.com/' + data + '>' + data + '</a>';
             }
             return data;
         }
@@ -154,7 +170,7 @@
         { "data": "model", "title": "Model" },
         { "data": "logloss", "title": "Logloss" },
         { "data": "auc", "title": "AUC" },
-        { "data": "link", "title": "Steps to Reproduce"},
+        { "data": "link", "title": "Steps-to-Reproduce"},
         { "data": "contr", "title": "Contributor" }
       ]
     });

@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Open-CTR-Benchmark</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/r/zf-5.5.2/jqc-1.11.3,dt-1.10.8/datatables.min.css"/>
+<meta name="robots" content="noindex, follow">
+</head>
+
+<body>
+<div class="wrapper d-flex align-items-stretch">
+<nav id="sidebar">
+<div class="custom-menu">
+<button type="button" id="sidebarCollapse" class="btn btn-primary">
+<i class="fa fa-bars"></i>
+<span class="sr-only">Toggle Menu</span>
+</button>
+</div>
+<div class="p-4 pt-5">
+<h1><a href="index.html" class="logo">OpenCTR</a></h1>
+<ul class="list-unstyled components mb-5">
+<li class="active">
+<a href="./index.html">Introduction</a>
+</li>
+<li>
+<a href="#">Models</a>
+</li>
+<li>
+<a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Datasets</a>
+<ul class="collapse list-unstyled" id="pageSubmenu">
+<li>
+<a href="#">Criteo</a>
+</li>
+<li>
+<a href="#">Avazu</a>
+</li>
+<li>
+<a href="#">Taobao</a>
+</li>
+<li>
+<a href="#">KKBox</a>
+</li>
+<li>
+<a href="#">MicroVideo-1.7M</a>
+</li>
+<li>
+<a href="#">Frappe</a>
+</li>
+<li>
+<a href="#">MovieLens</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#LeadBoard" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">LeaderBoards</a>
+<ul class="collapse list-unstyled" id="LeadBoard">
+<li>
+<a href="./criteo_x4_001.html">criteo_x4_001</a>
+</li>
+<li>
+<a href="./criteo_x4_002.html">criteo_x4_002</a>
+</li>
+<li>
+<a href="#">criteo_x0_001</a>
+</li>
+<li>
+<a href="./avazu_x4_001.html">avazu_x4_001</a>
+</li>
+<li>
+<a href="./avazu_x4_002.html">avazu_x4_002</a>
+</li>
+<li>
+<a href="#">avazu_x0_001</a>
+</li>
+<li>
+<a href="#">kkbox_x4_001</a>
+</li>
+<li>
+<a href="#">taobao_x0_001</a>
+</li>
+<li>
+<a href="#">microvideo1.7m_x0_001</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#">Call for Contributions</a>
+</li>
+<li>
+<a href="#Links" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Related Links</a>
+<ul class="collapse list-unstyled" id="Links">
+<li>
+<a href="#">FuxiCTR package</a>
+</li>
+<li>
+<a href="#">Open-CF-Benchmark</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#">Feedback</a>
+</li>
+</ul>
+<div class="mb-5">
+<h3 class="h6">Fork on Github</h3>
+</div>
+<div class="mb-5">
+<h3 class="h6">Join Wechat Group</h3>
+</div>
+</div>
+</nav>
+
+<div id="content" class="p-4 p-md-5 pt-5">
+<h2 class="mb-4">Benchmarking on avazu_x4_002</h2>
+<p>Welecome to the open benchmarking site for CTR prediction.</p>
+
+<!-- Add data table -->
+<table id="table1" class="table table-bordered">
+</table>
+
+</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="../js/popper.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/main.js"></script>
+
+<script src="https://cdn.datatables.net/r/zf-5.5.2/jqc-1.11.3,dt-1.10.8/datatables.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/no-data-to-display.js"></script>
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('#table1').DataTable({
+      "pageLength": 10,
+      "lengthMenu": [[10, 20, 50, -1], [10, 20, 50, "All"]],
+      "ajax": {
+        "url": "https://raw.githubusercontent.com/xue-pai/Open-CTR-Benchmark/master/results/avazu_x4_002.json",
+        "dataSrc": "data"
+      },
+      "columnDefs": [
+      {
+        "targets": 5,
+        render: function (data, type, row, meta)
+        {
+            if (type === 'display')
+            {
+                data = '<a href=' + data + '>Link</a>';
+            }
+            return data;
+        }
+      },
+      {
+        "targets": 6,
+        render: function (data, type, row, meta)
+        {
+            if (type === 'display')
+            {
+                data = '<a href=https://github.com/' + data + '>' + data + '</a>';
+            }
+            return data;
+        }
+      }
+      ],
+      "columns": [
+        { "data": "year", "title": "Year" },
+        { "data": "pub", "title": "Publication" },
+        { "data": "model", "title": "Model" },
+        { "data": "logloss", "title": "Logloss" },
+        { "data": "auc", "title": "AUC" },
+        { "data": "link", "title": "Steps-to-Reproduce"},
+        { "data": "contr", "title": "Contributor" }
+      ]
+    });
+});
+</script>
+</body>
+</html>
+
