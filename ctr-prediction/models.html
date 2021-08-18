@@ -5,7 +5,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openbenchmark/openbenchmark.github.io/open-ctr-benchmark/css/style.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/r/zf-5.5.2/jqc-1.11.3,dt-1.10.8/datatables.min.css"/>
 <meta name="robots" content="noindex, follow">
 </head>
 
@@ -19,13 +20,13 @@
 </button>
 </div>
 <div class="p-4 pt-5">
-<h1><a href="./index.html" class="logo">OpenCTR</a></h1>
+<h1><a href="index.html" class="logo">OpenCTR</a></h1>
 <ul class="list-unstyled components mb-5">
 <li class="active">
-<a href="./index.html">Introduction</a>
+<a href="index.html">Introduction</a>
 </li>
 <li>
-<a href="./models.html">Models</a>
+<a href="models.html">Models</a>
 </li>
 <li>
 <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Datasets</a>
@@ -92,7 +93,7 @@
 <a href="#Links" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Related Links</a>
 <ul class="collapse list-unstyled" id="Links">
 <li>
-<a href="#">OpenCTR package</a>
+<a href="#">FuxiCTR package</a>
 </li>
 <li>
 <a href="#">Open-CF-Benchmark</a>
@@ -103,9 +104,8 @@
 <a href="#">Feedback</a>
 </li>
 </ul>
-
 <div class="mb-5">
-<h3 class="h6">Folk us on Github</h3>
+<h3 class="h6">Fork on Github</h3>
 </div>
 <div class="mb-5">
 <h3 class="h6">Join Wechat Group</h3>
@@ -114,13 +114,28 @@
 </nav>
 
 <div id="content" class="p-4 p-md-5 pt-5">
-<h2 class="mb-4">Open Benchmarking for CTR Prediction</h2>
+<h2 class="mb-4">A List of CTR Prediction Models</h2>
 <p>Welecome to the open benchmarking site for CTR prediction.</p>
+
+<!-- Add data table -->
+<table id="table1" class="table table-bordered">
+</table>
+
 </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="js/popper.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/openbenchmark/openbenchmark.github.io/open-ctr-benchmark/js/popper.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/openbenchmark/openbenchmark.github.io/open-ctr-benchmark/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/openbenchmark/openbenchmark.github.io/open-ctr-benchmark/js/main.js"></script>
+
+<script src="https://cdn.datatables.net/r/zf-5.5.2/jqc-1.11.3,dt-1.10.8/datatables.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/no-data-to-display.js"></script>
+<script src="./js/tablecharts.js"></script>
+<script type="text/javascript">
+  $(document).ready(model_tab ('#table1',
+    "https://cdn.jsdelivr.net/gh/xue-pai/open-ctr-benchmark/models/papers.json"));
+</script>
 </body>
 </html>
+
