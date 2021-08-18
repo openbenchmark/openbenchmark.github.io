@@ -1,6 +1,6 @@
 
 function model_tab(tableId, dataUrl) {
-  $(tableId).DataTable({
+  $('#' + tableId).DataTable({
     "pageLength": 20,
     "lengthMenu": [[20, 50, 100, -1], [20, 50, 100, "All"]],
     "ajax": {
@@ -36,7 +36,7 @@ function model_tab(tableId, dataUrl) {
 
 
 function result_tab(tableId, dataUrl) {
-  $(tableId).DataTable({
+  $('#' + tableId).DataTable({
     "pageLength": 10,
     "lengthMenu": [[10, 20, 50, -1], [10, 20, 50, "All"]],
     "ajax": {
