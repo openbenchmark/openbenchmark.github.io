@@ -1,5 +1,5 @@
 
-function model_tab(tableId, dataUrl) {
+function createModelTable(tableId, dataUrl) {
   $('#' + tableId).DataTable({
     "pageLength": 20,
     "lengthMenu": [[20, 50, 100, -1], [20, 50, 100, "All"]],
@@ -14,7 +14,7 @@ function model_tab(tableId, dataUrl) {
       { "title": "Paper",
         render: function (data, type, row, meta)
         {
-          company = ""
+          var company = ""
           if (row.company != "") {
             company = '&nbsp;&nbsp;&nbsp;<i class="fa fa-flag-checkered fa-lg" aria-hidden="true" style="color:#c70404"></i> <strong>' + row.company + '</strong>';
           }
@@ -35,7 +35,7 @@ function model_tab(tableId, dataUrl) {
 }
 
 
-function result_tab(tableId, dataUrl) {
+function createTableChart(tableId, chartId, dataUrl) {
   $('#' + tableId).DataTable({
     "pageLength": 10,
     "lengthMenu": [[10, 20, 50, -1], [10, 20, 50, "All"]],
@@ -69,6 +69,98 @@ function result_tab(tableId, dataUrl) {
           return data;
         }
       }
-    ]
+    ],
+    "drawCallback": function( settings ) {
+        var table = this.api();
+        // get table data
+        var dataArray = chartData(table);
+        // Output the data for the visible rows to the browser's console
+        console.log( dataArray );
+        // create Highcharts
+        plotChart(dataArray, chartId);
+    }
   });
 }
+
+
+function chartData(table) {
+  var dataArray = [],
+  xArray = [],
+  yMetric1 = [],
+  yMetric2 = [];
+  // loop table rows
+  table.rows().every(function () {
+    var data = this.data();
+    xArray.push(data.model);
+    yMetric1.push(parseFloat(data.auc));
+    yMetric2.push(parseFloat(data.logloss));
+  });
+  // store all data in dataArray
+  dataArray.push(xArray, yMetric1, yMetric2);
+  return dataArray;
+}
+
+
+function plotChart(data, chartId) {
+  Highcharts.setOptions({
+    lang: {
+      thousandsSep: "," } });
+
+  Highcharts.chart(chartId, {
+    title: {
+      text: "Benchmarking Results of Existing Models" },
+
+    subtitle: {
+      text: "" },
+
+    xAxis: [
+    {
+      categories: data[0],
+      labels: {
+        rotation: -50 } }],
+
+    yAxis: [
+    {
+      // first yaxis
+      title: {
+        text: "AUC" } },
+
+    {
+      // secondary yaxis
+      title: {
+        text: "Logloss" },
+
+      // min: 0,
+      opposite: true }],
+
+    series: [
+    {
+      name: "AUC",
+      color: "#FF404E",
+      type: "spline",
+      data: data[1] },
+
+    {
+      name: "Logloss",
+      color: "#0071A7",
+      type: "spline",
+      data: data[2],
+      yAxis: 1 }],
+
+    tooltip: {
+      shared: true },
+
+    legend: {
+      backgroundColor: "#fcfcfc",
+      shadow: true },
+
+    credits: {
+      enabled: false },
+
+    noData: {
+      style: {
+        fontSize: "20px" } } });
+}
+
+
+

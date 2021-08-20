@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openbenchmark/openbenchmark.github.io/open-ctr-benchmark/css/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openbenchmark/openbenchmark.github.io@0.0.1/ctr-prediction/css/style.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/r/zf-5.5.2/jqc-1.11.3,dt-1.10.8/datatables.min.css"/>
 <meta name="robots" content="noindex, follow">
 </head>
@@ -20,7 +20,7 @@
 </button>
 </div>
 <div class="p-4 pt-5">
-<h1><a href="../index.html" class="logo">OpenCTR</a></h1>
+<h1 style="font-size:34px"><a href="../index.html" class="logo">OpenCTR Benchmark</a></h1>
 <ul class="list-unstyled components mb-5">
 <li class="active">
 <a href="../index.html">Introduction</a>
@@ -55,7 +55,7 @@
 </ul>
 </li>
 <li>
-<a href="#LeadBoard" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">LeaderBoards</a>
+<a href="#LeadBoard" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">LeaderBoard</a>
 <ul class="collapse list-unstyled" id="LeadBoard">
 <li>
 <a href="./criteo_x4_001.html">criteo_x4_001</a>
@@ -114,27 +114,28 @@
 </nav>
 
 <div id="content" class="p-4 p-md-5 pt-5">
-<h2 class="mb-4">Benchmarking on avazu_x4_002</h2>
+<h2 class="mb-4">Benchmarking on criteo_x4_001</h2>
 <p>Welecome to the open benchmarking site for CTR prediction.</p>
 
-<!-- Add data table -->
-<table id="table1" class="table table-bordered">
-</table>
+<!-- Add tables and charts -->
+<div id="chart1"></div>
+<p><br></p>
+<table id="table1" class="table table-bordered"></table>
 
 </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/openbenchmark/openbenchmark.github.io/open-ctr-benchmark/js/popper.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/openbenchmark/openbenchmark.github.io/open-ctr-benchmark/js/bootstrap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/openbenchmark/openbenchmark.github.io/open-ctr-benchmark/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/openbenchmark/openbenchmark.github.io@0.0.1/ctr-prediction/js/popper.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/openbenchmark/openbenchmark.github.io@0.0.1/ctr-prediction/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/openbenchmark/openbenchmark.github.io@0.0.1/ctr-prediction/js/main.js"></script>
 
 <script src="https://cdn.datatables.net/r/zf-5.5.2/jqc-1.11.3,dt-1.10.8/datatables.min.js"></script>
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/modules/no-data-to-display.js"></script>
 <script src="../js/tablecharts.js"></script>
 <script type="text/javascript">
-  $(document).ready(result_tab ('table1', 
-  "https://cdn.jsdelivr.net/gh/xue-pai/open-ctr-benchmark/results/avazu_x4_002.json"));
+  $(document).ready(createTableChart('table1', 'chart1', 
+  "https://cdn.jsdelivr.net/gh/xue-pai/open-ctr-benchmark/results/criteo_x4_001.json"));
 </script>
 </body>
 </html>
