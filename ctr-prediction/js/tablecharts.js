@@ -7,6 +7,7 @@ function createModelTable(tableId, dataUrl) {
       "url": dataUrl,
       "dataSrc": "data"
     },
+    "order": [[ 0, "desc" ]],
     "columns": [
       { "data": "year", "title": "Year" },
       { "data": "pub", "title": "Publication" },
@@ -43,8 +44,9 @@ function createTableChart(tableId, chartId, dataUrl) {
       "url": dataUrl,
       "dataSrc": "data"
     },
-    "order": [[ 4, "desc" ]],
+    "order": [[ 5, "desc" ]],
     "columns": [
+      { "data": null, "title": "No", "orderable": false, "searchable": false },
       { "data": "year", "title": "Year" },
       { "data": "pub", "title": "Publication" },
       { "data": "model", "title": "Model" },
@@ -73,6 +75,10 @@ function createTableChart(tableId, chartId, dataUrl) {
     ],
     "drawCallback": function( settings ) {
         var table = this.api();
+        // get row id
+        table.column(0, {search: 'applied'}).nodes().each( function(cell, i) {
+          cell.innerHTML = i + 1;
+        })
         // get table data
         var dataArray = chartData(table);
         // Output the data for the visible rows to the browser's console
