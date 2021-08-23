@@ -43,6 +43,7 @@ function createTableChart(tableId, chartId, dataUrl) {
       "url": dataUrl,
       "dataSrc": "data"
     },
+    "order": [[ 4, "desc" ]],
     "columns": [
       { "data": "year", "title": "Year" },
       { "data": "pub", "title": "Publication" },
@@ -89,7 +90,7 @@ function chartData(table) {
   yMetric1 = [],
   yMetric2 = [];
   // loop table rows
-  table.rows().every(function () {
+  table.rows({ search: "applied" }).every(function () {
     var data = this.data();
     xArray.push(data.model);
     yMetric1.push(parseFloat(data.auc));
