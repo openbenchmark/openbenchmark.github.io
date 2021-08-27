@@ -24,13 +24,13 @@ function createModelTable(tableId, dataUrl) {
                         company = '&nbsp;&nbsp;&nbsp;<i class="fa fa-flag-checkered fa-lg" aria-hidden="true" style="color:#c70404"></i> <strong>' + row.company + '</strong>';
                     }
                     if (type === 'display')
-                        if (row.paper != "") {
+                        if (row.link != "") {
                             content = '<a href="' + row.link + '" target="_blank">' + row.paper + '</a>, by ' + row.authors + company
                         } else {
                             content = row.paper + ' by ' + row.authors + company
                         }
-                    console.log(row.paper)
-                    console.log(content)
+                        // console.log(row.paper)
+                        // console.log(content)
                     return content
                         // return type === 'display' ?
                         // '<a href="' + row.link + '" target="_blank">' + row.paper + '</a>, by ' + row.authors + company : row.paper;
