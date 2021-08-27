@@ -29,7 +29,8 @@ function createModelTable(tableId, dataUrl) {
                         } else {
                             content = row.paper + ' by ' + row.authors + company
                         }
-                    print(content)
+                    console.log(row.paper)
+                    console.log(content)
                     return content
                         // return type === 'display' ?
                         // '<a href="' + row.link + '" target="_blank">' + row.paper + '</a>, by ' + row.authors + company : row.paper;
