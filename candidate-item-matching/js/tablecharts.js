@@ -23,7 +23,7 @@ function createModelTable(tableId, dataUrl) {
                     if (row.company != "") {
                         company = '&nbsp;&nbsp;&nbsp;<i class="fa fa-flag-checkered fa-lg" aria-hidden="true" style="color:#c70404"></i> <strong>' + row.company + '</strong>';
                     }
-                    return type === 'display' & data != '' ?
+                    return type === 'display' && data != '' ?
                         '<a href="' + row.link + '" target="_blank">' + row.paper + '</a>, by ' + row.authors + company : row.paper;
                 }
             },
