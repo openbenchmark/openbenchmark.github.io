@@ -92,9 +92,10 @@ function createTableChart(tableId, chartId, dataUrl) {
                 "data": "contr",
                 "title": "Contributor",
                 render: function(data, type, row, meta) {
-                    if (type === 'display') {
-                        data = '<a href=https://github.com/' + data + ' target="_blank">' + data + '</a>';
-                    }
+
+                    // if (type === 'display') {
+                    //     data = '<a href=https://github.com/' + data + ' target="_blank">' + data + '</a>';
+                    // }
                     return data;
                 }
             }
