@@ -23,8 +23,15 @@ function createModelTable(tableId, dataUrl) {
                     if (row.company != "") {
                         company = '&nbsp;&nbsp;&nbsp;<i class="fa fa-flag-checkered fa-lg" aria-hidden="true" style="color:#c70404"></i> <strong>' + row.company + '</strong>';
                     }
-                    return type === 'display' && row.paper != '' ?
-                        '<a href="' + row.link + '" target="_blank">' + row.paper + '</a>, by ' + row.authors + company : row.paper;
+                    if (type === 'display')
+                        if (row.paper != "") {
+                            content = '<a href="' + row.link + '" target="_blank">' + row.paper + '</a>, by ' + row.authors + company
+                        } else {
+                            content = row.paper + ' by ' + row.authors + company
+                        }
+                    return content
+                        // return type === 'display' ?
+                        // '<a href="' + row.link + '" target="_blank">' + row.paper + '</a>, by ' + row.authors + company : row.paper;
                 }
             },
             {
