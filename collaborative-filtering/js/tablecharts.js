@@ -71,7 +71,7 @@ function createTableChart(tableId, chartId, dataUrl) {
                 "data": "link",
                 "title": "Reproducing-Steps",
                 render: function(data, type, row, meta) {
-                    if (type === 'display') {
+                    if (data != '' & type === 'display') {
                         data = '<a href=' + data + ' target="_blank">Link</a>';
                     }
                     return data;
