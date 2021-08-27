@@ -19,12 +19,25 @@ function createModelTable(tableId, dataUrl) {
             {
                 "title": "Paper",
                 render: function(data, type, row, meta) {
+
                     var company = ""
+                    var content = row.paper
                     if (row.company != "") {
                         company = '&nbsp;&nbsp;&nbsp;<i class="fa fa-flag-checkered fa-lg" aria-hidden="true" style="color:#c70404"></i> <strong>' + row.company + '</strong>';
                     }
-                    return type === 'display' & data != '' ?
-                        '<a href="' + row.link + '" target="_blank">' + row.paper + '</a>, by ' + row.authors + company : row.paper;
+                    if (type === 'display')
+                        if (row.link != "") {
+                            content = '<a href="' + row.link + '" target="_blank">' + row.paper + '</a>, by ' + row.authors + company
+                        } else {
+                            content = row.paper + ' by ' + row.authors + company
+                        }
+                        // console.log(row.paper)
+                        // console.log(content)
+                    return content
+                        // return type === 'display' ?
+                        // '<a href="' + row.link + '" target="_blank">' + row.paper + '</a>, by ' + row.authors + company : row.paper;
+                        // return type === 'display' & data != '' ?
+                        // '<a href="' + row.link + '" target="_blank">' + row.paper + '</a>, by ' + row.authors + company : row.paper;
                 }
             },
             {

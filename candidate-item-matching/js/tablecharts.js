@@ -20,6 +20,8 @@ function createModelTable(tableId, dataUrl) {
                 "title": "Paper",
                 render: function(data, type, row, meta) {
                     var company = ""
+                    var content = row.paper
+
                     if (row.company != "") {
                         company = '&nbsp;&nbsp;&nbsp;<i class="fa fa-flag-checkered fa-lg" aria-hidden="true" style="color:#c70404"></i> <strong>' + row.company + '</strong>';
                     }
