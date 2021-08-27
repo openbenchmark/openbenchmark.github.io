@@ -166,14 +166,14 @@ function plotChart(data, chartId) {
         ],
 
         series: [{
-                name: "AUC",
+                name: "Recall@20",
                 color: "#FF404E",
                 type: "spline",
                 data: data[1]
             },
 
             {
-                name: "Logloss",
+                name: "NDCG@20",
                 color: "#0071A7",
                 type: "spline",
                 data: data[2],
