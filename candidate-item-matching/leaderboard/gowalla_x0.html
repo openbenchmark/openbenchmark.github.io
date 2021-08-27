@@ -93,8 +93,9 @@
                         <a href="https://github.com/xue-pai/Open-Match-Benchmark/issues/new">Feedback</a>
                     </li>
                 </ul>
-                <div class="mb-5">
-                    <h3 class="h6">Fork on Github</h3>
+                <div class='mb-5'>
+                    <button id="fork-btn" class="btn btn-primary" style="background:#a791e2" data-loading-text="Loading..." type="button"> Fork us on Github
+                    </button>
                 </div>
                 <!-- <div class="mb-5">
                     <h3 class="h6">Join Wechat Group</h3>
@@ -125,6 +126,13 @@
     <script type="text/javascript">
         $(document).ready(createTableChart('table1', 'chart1',
             "https://cdn.jsdelivr.net/gh/xue-pai/Open-MATCH-Benchmark/results/gowalla_x0.json"));
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#fork-btn").click(function() {
+                location.href = "https://github.com/openbenchmark/openbenchmark.github.io";
+            });
+        });
     </script>
 </body>
 
