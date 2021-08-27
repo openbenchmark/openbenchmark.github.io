@@ -115,11 +115,7 @@ function chartData(table) {
         var data = this.data();
         xArray.push(data.model);
         yMetric1.push(parseFloat(data.recall_20));
-        yMetric2.push(parseFloat(data.recall_50));
-        yMetric2.push(parseFloat(data.ndcg_50));
-        yMetric2.push(parseFloat(data.ndcg_50));
-        yMetric2.push(parseFloat(data.hit_rate_50));
-        yMetric2.push(parseFloat(data.hit_rate_50));
+        yMetric2.push(parseFloat(data.ndcg_20));
 
     });
     // store all data in dataArray
@@ -154,14 +150,14 @@ function plotChart(data, chartId) {
         yAxis: [{
                 // first yaxis
                 title: {
-                    text: "AUC"
+                    text: "Recall@20"
                 }
             },
 
             {
                 // secondary yaxis
                 title: {
-                    text: "Logloss"
+                    text: "NDCG@20"
                 },
 
                 // min: 0,
