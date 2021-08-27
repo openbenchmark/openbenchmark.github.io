@@ -53,7 +53,7 @@ function createTableChart(tableId, chartId, dataUrl) {
             "dataSrc": "data"
         },
         "order": [
-            [5, "desc"]
+            [4, "desc"]
         ],
         "columns": [
             { "data": null, "title": "No", "orderable": false, "searchable": false },
