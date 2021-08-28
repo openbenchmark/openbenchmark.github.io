@@ -105,9 +105,9 @@
                     </li>
                 </ul>
 
-                <div class="mb-5">
-                    <!-- <button></button> -->
-                    <h3 class="h6">Folk us on Github</h3>
+                <div class='mb-5'>
+                    <button id="fork-btn" class="btn btn-primary" style="background:#a791e2" data-loading-text="Loading..." type="button"> Fork us on Github
+                    </button>
                 </div>
                 <!-- <div class="mb-5">
                     <h3 class="h6">Join Wechat Group</h3>
@@ -124,6 +124,13 @@
     <script src="https://cdn.jsdelivr.net/gh/openbenchmark/openbenchmark.github.io@0.0.1/ctr-prediction/js/popper.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/openbenchmark/openbenchmark.github.io@0.0.1/ctr-prediction/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/openbenchmark/openbenchmark.github.io@0.0.1/ctr-prediction/js/main.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#fork-btn").click(function() {
+                location.href = "https://github.com/openbenchmark/openbenchmark.github.io";
+            });
+        });
+    </script>
 </body>
 
 </html>
