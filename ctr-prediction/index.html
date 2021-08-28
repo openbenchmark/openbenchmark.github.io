@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>CTR Prediction Benchmark</title>
+    <title>BARS | Open-CTR-Benchmark</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -15,44 +15,24 @@
         <nav id="sidebar">
             <div class="custom-menu">
                 <button type="button" id="sidebarCollapse" class="btn btn-primary">
-<i class="fa fa-bars"></i>
-<span class="sr-only">Toggle Menu</span>
-</button>
+                  <i class="fa fa-bars"></i>
+                  <span class="sr-only">Toggle Menu</span>
+                </button>
             </div>
             <div class="p-4 pt-5">
-                <h1 style="font-size:34px"><a href="./index.html" class="logo">CTR Prediction</a></h1>
+                <h1><a href="./index.html" class="logo">BARS</a></h1>
                 <ul class="list-unstyled components mb-5">
                     <li class="active">
-                        <a href="./index.html">Introduction</a>
+                        <a href="./index.html">CTR Prediction</a>
                     </li>
                     <li>
                         <a href="./models.html">Models</a>
                     </li>
                     <li>
-                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Datasets</a>
-                        <ul class="collapse list-unstyled" id="pageSubmenu">
-                            <li>
-                                <a href="https://github.com/xue-pai/Open-CTR-Benchmark/blob/master/datasets.md#Criteo" target="_blank">Criteo</a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/xue-pai/Open-CTR-Benchmark/blob/master/datasets.md#Avazu" target="_blank">Avazu</a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/xue-pai/Open-CTR-Benchmark/blob/master/datasets.md#Taobao" target="_blank">Taobao</a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/xue-pai/Open-CTR-Benchmark/blob/master/datasets.md#KKBox" target="_blank">KKBox</a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/xue-pai/Open-CTR-Benchmark/blob/master/datasets.md#MicroVideo1.7M" target="_blank">MicroVideo1.7M</a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/xue-pai/Open-CTR-Benchmark/blob/master/datasets.md#Frappe" target="_blank">Frappe</a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/xue-pai/Open-CTR-Benchmark/blob/master/datasets.md#MovieLens" target="_blank">MovieLens</a>
-                            </li>
-                        </ul>
+                        <a href="https://github.com/xue-pai/Open-CTR-Benchmark/blob/master/datasets/README.md", target="_blank">Datasets</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/xue-pai/Open-CTR-Benchmark/blob/master/toolkits.md", target="_blank">Toolkits</a>
                     </li>
                     <li>
                         <a href="#LeadBoard" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Benchmarking Results</a>
@@ -64,7 +44,7 @@
                                 <a href="./leaderboard/criteo_x4_002.html">criteo_x4_002</a>
                             </li>
                             <li>
-                                <a href="#">criteo_x0_001</a>
+                                <a href="./leaderboard/criteo_x0_001.html">criteo_x0_001</a>
                             </li>
                             <li>
                                 <a href="./leaderboard/avazu_x4_001.html">avazu_x4_001</a>
@@ -81,35 +61,32 @@
                             <li>
                                 <a href="./leaderboard/taobao_x0_001.html">taobao_x0_001</a>
                             </li>
-                            <!-- <li>
-                                <a href="#">microvideo1.7m_x0_001</a>
-                            </li> -->
+                            <li>
+                                <a href="./leaderboard/microvideo1.7m_x0_001.html">microvideo1.7m_x0_001</a>
+                            </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="https://github.com/xue-pai/Open-CTR-Benchmark/blob/master/CONTRIBUTING.md">Call for Contributions</a>
-                    </li>
-                    <!-- <li>
-                        <a href="#Links" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Related Links</a>
+                        <a href="#Links" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">BARS Links</a>
                         <ul class="collapse list-unstyled" id="Links">
                             <li>
-                                <a href="#">OpenCTR package</a>
+                                <a href="https://openbenchmark.github.io/ctr-prediction">Open-CTR-Benchmark</a>
                             </li>
                             <li>
-                                <a href="#">Open-CF-Benchmark</a>
+                                <a href="https://openbenchmark.github.io/candidate-matching">Open-Match-Benchmark</a>
                             </li>
                         </ul>
-                    </li> -->
-                    <li>
-                        <a href="https://github.com/xue-pai/Open-CTR-Benchmark/issues/new" , target="_blank">Feedback</a>
                     </li>
                     <li>
-                        <a href="https://github.com/xue-pai/Open-CTR-Benchmark/blob/master/toolkits.md" , target="_blank">Toolkits</a>
+                        <a href="https://github.com/xue-pai/Open-CTR-Benchmark/blob/master/CONTRIBUTING.md", target="_blank">Call for Contributions</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/xue-pai/Open-CTR-Benchmark/issues/new", target="_blank">Feedback</a>
                     </li>
                 </ul>
 
                 <div class='mb-5'>
-                    <button id="fork-btn" class="btn btn-primary" style="background:#a791e2" data-loading-text="Loading..." type="button"> Fork us on Github
+                    <button id="fork-btn" class="btn btn-primary" style="background:#a791e2" data-loading-text="Loading..." type="button"> Fork Github Repo
                     </button>
                 </div>
                 <!-- <div class="mb-5">
@@ -119,8 +96,18 @@
         </nav>
 
         <div id="content" class="p-4 p-md-5 pt-5">
-            <h2 class="mb-4">Open Benchmarking for CTR Prediction</h2>
-            <p>Welcome to the open benchmarking site for CTR prediction.</p>
+            <h2 class="mb-4">BARS / Open-CTR-Benchmark</h2>
+            <p><strong>Congratulations! You have found BARS, an awesome project aimed for open <u>B</u>enchm<u>A</u>rking for <u>R</u>ecommender <u>S</u>ystems.</strong></p>
+            <p>Click-through rate (CTR) prediction, or user response prediction in general, is an important task in recommender systems. The BARS project aims to build an open benchmark for CTR prediction, which consists of:</p>
+
+            <ul>
+              <li>A curated list of CTR prediction models which have been tagged into different types, such as feature-interactions, user-interest-modeling, multi-task modeling, cross-domain modeling, AutoML, etc.</li>
+              <li>A collection of public datasets for CTR prediction research, and unique dataset IDs to track specific data splits for each dataset.</li>
+              <li>An open-source library for CTR prediction, with configurable, tunable, and reproducible designs.</li>
+              <li>Most importantly, the most comprehensive benchmarking results on various dataset IDs and settings.</li>
+            </ul>
+
+            <p>The ultimate goal of BARS is to drive research in the development of recommender systems.</p>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -130,7 +117,7 @@
     <script type="text/javascript">
         $(document).ready(function() {
             $("#fork-btn").click(function() {
-                location.href = "https://github.com/openbenchmark/openbenchmark.github.io";
+                location.href="https://github.com/xue-pai/Open-CTR-Benchmark";
             });
         });
     </script>
