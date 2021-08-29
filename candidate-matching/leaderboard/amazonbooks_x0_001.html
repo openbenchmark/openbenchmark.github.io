@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openbenchmark/openbenchmark.github.io@0.0.1/ctr-prediction/css/style.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/r/zf-5.5.2/jqc-1.11.3,dt-1.10.8/datatables.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/openbenchmark/openbenchmark.github.io@0.0.2/candidate-matching/css/datatables.css">
     <meta name="robots" content="noindex, follow">
 </head>
 
@@ -39,13 +39,13 @@
                         <a href="#LeadBoard" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Benmarking Results</a>
                         <ul class="collapse list-unstyled" id="LeadBoard">
                             <li>
-                                <a href="./amazonbooks_x0.html">amazonbooks_x0_001</a>
+                                <a href="./amazonbooks_x0_001.html">amazonbooks_x0_001</a>
                             </li>
                             <li>
-                                <a href="./yelp18_x0.html">yelp18_x0_001</a>
+                                <a href="./yelp18_x0_001.html">yelp18_x0_001</a>
                             </li>
                             <li>
-                                <a href="./gowalla_x0.html">gowalla_x0_001</a>
+                                <a href="./gowalla_x0_001.html">gowalla_x0_001</a>
                             </li>
                         </ul>
                     </li>
@@ -79,8 +79,7 @@
         </nav>
 
         <div id="content" class="p-4 p-md-5 pt-5">
-            <h2 class="mb-4">Benchmarking on yelp18_x0_001</h2>
-
+            <h2 class="mb-4">Benchmarking on amazonbooks_x0_001</h2>
             <!-- Add tables and charts -->
             <div id="chart1"></div>
             <p><br></p>
@@ -99,7 +98,8 @@
     <script src="../js/tablecharts.js"></script>
     <script type="text/javascript">
         $(document).ready(createTableChart('table1', 'chart1',
-            "https://raw.githubusercontent.com/xue-pai/Open-Match-Benchmark/master/results/yelp18_x0.json"));
+            "https://raw.githubusercontent.com/xue-pai/Open-Match-Benchmark/master/results/amazonbooks_x0.json",
+        ));
     </script>
     <script type="text/javascript">
         $(document).ready(function() {
