@@ -42,7 +42,7 @@ function createModelTable(tableId, dataUrl) {
             },
             {
                 "data": "available",
-                "title": "Available",
+                "title": "Code",
                 render: function(data, type, row, meta) {
                     return type === 'display' && data == "Y" ?
                         '<i class="fa fa-check-square-o fa-lg" aria-hidden="true" style="color:#058f03"></i>' : "";
@@ -77,10 +77,10 @@ function createTableChart(tableId, chartId, dataUrl) {
             { "data": "auc", "title": "AUC" },
             {
                 "data": "link",
-                "title": "Reproducing-Steps",
+                "title": "Reproduce-Steps",
                 render: function(data, type, row, meta) {
                     if (data != '' & type === 'display') {
-                        data = '<a href=' + data + ' target="_blank">Link</a>';
+                        data = '<a href=' + data + ' target="_blank"><i class="fa fa-external-link fa-lg" aria-hidden="true" style="color:#058f03"></i></a>';
                     }
                     return data;
                 }
