@@ -30,10 +30,10 @@
                         <a href="../models.html">Models</a>
                     </li>
                     <li>
-                        <a href="https://github.com/xue-pai/Open-CTR-Benchmark/blob/master/datasets/README.md", target="_blank">Datasets</a>
+                        <a href="https://github.com/xue-pai/Open-CTR-Benchmark/blob/master/datasets/README.md" , target="_blank">Datasets</a>
                     </li>
                     <li>
-                        <a href="https://github.com/xue-pai/Open-CTR-Benchmark/blob/master/toolkits.md", target="_blank">Toolkits</a>
+                        <a href="https://github.com/xue-pai/Open-CTR-Benchmark/blob/master/toolkits.md" , target="_blank">Toolkits</a>
                     </li>
                     <li>
                         <a href="#LeadBoard" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Benchmarking Results</a>
@@ -79,7 +79,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="https://github.com/xue-pai/Open-CTR-Benchmark/blob/master/CONTRIBUTING.md", target="_blank">Call for Contributions</a>
+                        <a href="https://github.com/xue-pai/Open-CTR-Benchmark/blob/master/CONTRIBUTING.md" , target="_blank">Call for Contributions</a>
                     </li>
                     <li>
                         <a href="https://github.com/xue-pai/Open-CTR-Benchmark/issues/new" , target="_blank">Feedback</a>
@@ -115,14 +115,18 @@
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/no-data-to-display.js"></script>
     <script src="../js/tablecharts.js"></script>
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         $(document).ready(createTableChart('table1', 'chart1',
             "https://raw.githubusercontent.com/xue-pai/Open-CTR-Benchmark/master/results/avazu_x4_002.json"));
+    </script> -->
+    <script type="text/javascript">
+        $(document).ready(createTableChart('table1', 'chart1',
+            "https://cdn.jsdelivr.net/gh/xue-pai/Open-CTR-Benchmark/results/avazu_x4_002.json"));
     </script>
     <script type="text/javascript">
         $(document).ready(function() {
             $("#fork-btn").click(function() {
-                location.href="https://github.com/xue-pai/Open-CTR-Benchmark";
+                location.href = "https://github.com/xue-pai/Open-CTR-Benchmark";
             });
         });
     </script>
