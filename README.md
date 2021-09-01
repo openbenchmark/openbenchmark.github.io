@@ -3,6 +3,6 @@
 
 + Open-CTR-Benchmark: [https://openbenchmark.github.io/ctr-prediction](https://openbenchmark.github.io/ctr-prediction)
 
-+ Open-Math-Benchmark: [https://openbenchmark.github.io/candidate-matching](https://openbenchmark.github.io/candidate-matching/index.html)
++ Open-Match-Benchmark: [https://openbenchmark.github.io/candidate-matching](https://openbenchmark.github.io/candidate-matching/index.html)
 
 
