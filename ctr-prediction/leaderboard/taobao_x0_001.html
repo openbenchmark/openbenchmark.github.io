@@ -22,57 +22,7 @@
             </div>
             <div class="p-4 pt-5">
                 <h1><a href="https://openbenchmark.github.io/BARS" class="logo">BARS</a></h1>
-                <ul class="list-unstyled components mb-5 no-bullet">
-                    <li class="active">
-                        <a href="../">Open-CTR-Benchmark</a>
-                    </li>
-                    <li>
-                        <a href="../models.html">Models</a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/xue-pai/Open-CTR-Benchmark/blob/master/datasets/README.md" , target="_blank">Datasets</a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/xue-pai/Open-CTR-Benchmark/blob/master/toolkits.md" , target="_blank">Toolkits</a>
-                    </li>
-                    <li>
-                        <a href="#LeadBoard" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Benchmarking Results</a>
-                        <ul class="collapse list-unstyled" id="LeadBoard">
-                            <li>
-                                <a href="./criteo_x4_001.html">criteo_x4_001</a>
-                            </li>
-                            <li>
-                                <a href="./criteo_x4_002.html">criteo_x4_002</a>
-                            </li>
-                            <li>
-                                <a href="./criteo_x0_001.html">criteo_x0_001</a>
-                            </li>
-                            <li>
-                                <a href="./avazu_x4_001.html">avazu_x4_001</a>
-                            </li>
-                            <li>
-                                <a href="./avazu_x4_002.html">avazu_x4_002</a>
-                            </li>
-                            <li>
-                                <a href="./avazu_x0_001.html">avazu_x0_001</a>
-                            </li>
-                            <li>
-                                <a href="./kkbox_x4_001.html">kkbox_x4_001</a>
-                            </li>
-                            <li>
-                                <a href="./taobao_x0_001.html">taobao_x0_001</a>
-                            </li>
-                            <li>
-                                <a href="./microvideo1.7m_x0_001.html">microvideo1.7m_x0_001</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="https://github.com/xue-pai/Open-CTR-Benchmark/blob/master/CONTRIBUTING.md" , target="_blank">Call for Contributions</a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/xue-pai/Open-CTR-Benchmark/issues/new" , target="_blank">Feedback</a>
-                    </li>
+                <ul class="list-unstyled components mb-5 no-bullet" id="nav_ul">
                 </ul>
 
                 <div class='mb-5'>
@@ -112,8 +62,11 @@
         $(document).ready(createTableChart('table1', 'chart1',
             "https://cdn.jsdelivr.net/gh/xue-pai/Open-CTR-Benchmark/results/taobao_x0_001.json"));
     </script>
-    <script type="text/javascript">
-        $(document).ready(function() {
+        <script type="text/javascript" src="../js/nav.js"></script>
+
+        <script type="text/javascript">
+            add_nav("taobao_x0_001");
+            $(document).ready(function() {
             $("#fork-btn").click(function() {
                 location.href = "https://github.com/xue-pai/Open-CTR-Benchmark";
             });
