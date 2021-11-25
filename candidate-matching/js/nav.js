@@ -1,8 +1,13 @@
 function add_nav_li(link, link_name, page_name, mode = 0) {
     var new_nav = document.createElement('li');
     var a = document.createElement('a');
-    a.href = link
-    a.innerHTML = link_name
+    if(window.location.href.split('/').reverse()[1]=='leaderboard'){
+        a.href = "../"+link;
+    }
+    else{
+        a.href = link;
+    }
+    a.innerHTML = link_name;
     if (mode == 1) {
         a.setAttribute("target",'_blank');
     }
@@ -24,20 +29,14 @@ function add_nav_ul(name, data, page_name) {
     var new_ul = document.createElement('ul');
     new_ul.setAttribute("class","collapse list-unstyled");
     new_ul.setAttribute("id","LeadBoard");
-    var flag = 0;
-    for (var i = 0; i < data.length; i = i + 1) {
-        if(data[i]["name"]==page_name){
-            sub_li.setAttribute("class","active");
-            flag = 1;
-        }
-    }
+
     for (var i = 0; i < data.length; i = i + 1) {
         var sub_li = document.createElement('li');
         var sub_a = document.createElement('a');
         if(data[i]["name"]==page_name){
             sub_li.setAttribute("class","active");
         }
-        if(flag==0){
+        if(window.location.href.split('/').reverse()[1]=='leaderboard'){
             sub_a.href = "../"+data[i]["link"];
         }
         else{
@@ -62,9 +61,7 @@ function add_nav(page_name) {
         if (request.status == 200) {
             var nav_data = JSON.parse(request.responseText);
             for (var i = 0; i < nav_data.length; i = i + 1) {
-                console.log(nav_data[i]["name"])
                 if (nav_data[i].hasOwnProperty("type")) {
-                    console.log("lalalsa");
                     add_nav_ul(name=nav_data[i]["name"],data=nav_data[i]["data"],page_name=page_name);
                 }
                 else {
