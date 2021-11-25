@@ -1,7 +1,7 @@
 function add_nav_li(link, link_name, page_name, mode = 0) {
     var new_nav = document.createElement('li');
     var a = document.createElement('a');
-    if(window.location.href.split('/').reverse()[1]=='leaderboard'){
+    if(window.location.href.split('/').reverse()[1]=='leaderboard' && link.substring(0,4)!='http'){
         a.href = "../"+link;
     }
     else{
@@ -36,7 +36,8 @@ function add_nav_ul(name, data, page_name) {
         if(data[i]["name"]==page_name){
             sub_li.setAttribute("class","active");
         }
-        if(window.location.href.split('/').reverse()[1]=='leaderboard'){
+        if(window.location.href.split('/').reverse()[1]=='leaderboard' && data[i]["link"].substring(0,4)!='http'){
+
             sub_a.href = "../"+data[i]["link"];
         }
         else{
@@ -53,7 +54,7 @@ function add_nav_ul(name, data, page_name) {
 
 function add_nav(page_name) {
     // load nav json data 
-    var nav_json = "https://openbenchmark.github.io/ctr-prediction/nav.json"
+    var nav_json = "https://openbenchmark.github.io/candidate-matching/nav.json"
     var request = new XMLHttpRequest();
     request.open("get", nav_json);
     request.send(null);

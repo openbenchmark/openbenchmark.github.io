@@ -1,7 +1,7 @@
 function add_nav_li(link, link_name, page_name, mode = 0) {
     var new_nav = document.createElement('li');
     var a = document.createElement('a');
-    if(window.location.href.split('/').reverse()[1]=='leaderboard' && data[i]["link"].substring(0,4)!='http'){
+    if(window.location.href.split('/').reverse()[1]=='leaderboard' && link.substring(0,4)!='http'){
         a.href = "../"+link;
     }
     else{
