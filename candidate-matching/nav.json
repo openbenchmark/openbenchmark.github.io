@@ -1,0 +1,30 @@
+[
+    {
+        "name":"Open-Match-Benchmark",
+        "link":"./"
+    },
+    {
+        "name":"Models",
+        "link":"./models.html"
+    },
+    {
+        "name":"Datasets",
+        "link":"https://github.com/xue-pai/Open-Match-Benchmark/blob/master/datasets/README.md",
+        "mode":1
+    },
+    {
+        "name":"Toolkits",
+        "link":"https://github.com/xue-pai/Open-Match-Benchmark/blob/master/toolkits.md",
+        "mode":1
+    },
+    {
+        "name":"Call for contributions",
+        "link":"https://github.com/xue-pai/Open-Match-Benchmark/blob/master/CONTRIBUTING.md",
+        "mode":1
+    },
+    {
+        "name":"Feedback",
+        "link":"https://github.com/xue-pai/Open-Match-Benchmark/issues/new",
+        "mode":1
+    }
+]
