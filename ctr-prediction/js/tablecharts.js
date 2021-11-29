@@ -27,19 +27,14 @@ function createModelTable(tableId, dataUrl) {
                     }
                     if (type === 'display')
                         if (row.link != "") {
-                            content = '<a href="' + row.link + '" target="_blank">' + row.paper + '</a>, by ' + row.authors + company
+                            content = '<a href=' + row.link + ' target="_blank">' + row.paper + '</a>, by ' + row.authors + company
                         } else {
                             content = row.paper + ' by ' + row.authors + company
                         }
-                        // console.log(row.paper)
-                        // console.log(content)
                     return content
-                        // return type === 'display' ?
-                        // '<a href="' + row.link + '" target="_blank">' + row.paper + '</a>, by ' + row.authors + company : row.paper;
-                        // return type === 'display' & data != '' ?
-                        // '<a href="' + row.link + '" target="_blank">' + row.paper + '</a>, by ' + row.authors + company : row.paper;
                 }
             },
+            { "data": "tags", "title": "Tags" },
             {
                 "data": "code",
                 "title": "Code",
@@ -49,8 +44,7 @@ function createModelTable(tableId, dataUrl) {
                     }
                     return data;
                 }
-            },
-            { "data": "tags", "title": "Tags" }
+            }
         ]
     });
 }
@@ -92,7 +86,7 @@ function createTableChart(tableId, chartId, dataUrl) {
                 render: function(data, type, row, meta) {
                     var content = row.contr
                     if (type === 'display') {
-                        content = '<a href="' + row.contr_url + ' target="_blank">' + row.contr + '</a>';
+                        content = '<a href=' + row.contr_url + ' target="_blank">' + row.contr + '</a>';
                     }
                     return content;
                 }
