@@ -41,7 +41,7 @@ function createModelTable(tableId, dataUrl) {
                 }
             },
             {
-                "data": "available",
+                "data": "code",
                 "title": "Code",
                 render: function(data, type, row, meta) {
                     return type === 'display' && data == "Y" ?
