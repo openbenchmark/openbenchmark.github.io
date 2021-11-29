@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>BARS | Open-CTR-Benchmark</title>
+    <title>BARS-CTR-Prediction</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -23,12 +23,11 @@
             <div class="p-4 pt-5">
                 <h1><a href="https://openbenchmark.github.io/BARS" class="logo">BARS</a></h1>
                 <ul class="list-unstyled components mb-5 no-bullet" id="nav_ul">
-                
                 </ul>
-                <div class='mb-5'>
+<!--                 <div class='mb-5'>
                     <button id="fork-btn" class="btn btn-primary" style="background:#a791e2" data-loading-text="Loading..." type="button"> Fork Github Repo
                     </button>
-                </div>
+                </div> -->
                 <!-- <div class="mb-5">
                     <h3 class="h6">Join Wechat Group</h3>
                 </div> -->
@@ -36,15 +35,15 @@
         </nav>
 
         <div id="content" class="p-4 p-md-5 pt-5">
-            <h2 class="mb-4">Open-CTR-Benchmark</h2>
-            <p><strong>Congratulations! You have found BARS, an awesome project aimed for open <u>B</u>enchm<u>A</u>rking for <u>R</u>ecommender <u>S</u>ystems.</strong></p>
-            <p>Click-through rate (CTR) prediction, or user response prediction in general, is an important task in the ranking phase of recommender systems. The BARS project aims to build an open benchmark for CTR prediction, which consists of:</p>
+            <h2 class="mb-4">BARS-CTR-Prediction</h2>
+            <p><strong>BARS is an awesome project aimed for open <u>B</u>enchm<u>A</u>rking for <u>R</u>ecommender <u>S</u>ystems.</strong></p>
+            <p>Click-through rate (CTR) prediction (or user response prediction in general) is an important task in the ranking phase of recommender systems. The BARS project aims to build an open benchmark for CTR prediction, which consists of:</p>
 
             <ul>
-                <li><a href="./models.html">A curated list of CTR prediction models</a> which have been tagged into different types, such as feature-interactions, user-interest-modeling, multi-task modeling, cross-domain modeling, AutoML, etc.</li>
-                <li><a href="https://github.com/xue-pai/Open-CTR-Benchmark/blob/master/datasets/README.md" , target="_blank">A collection of public datasets for CTR prediction research</a>, and unique dataset IDs to track specific data splits for each dataset.</li>
-                <li><a href="https://github.com/xue-pai/OpenCTR", target="_blank">An open-source library for CTR prediction</a> with stunning features in configurablity, tunablity, and reproduciblity.</li>
-                <li>Most importantly, the most comprehensive <a href="https://openbenchmark.github.io/ctr-prediction/leaderboard/criteo_x4_001.html", target="_blank">benchmarking results on various dataset IDs and settings</a>. For each result, the detailed reproducing step is provided along with the open-source benchmarking code.</li>
+                <li><a href="./papers.html">A curated list of CTR prediction models</a> which have been tagged into different topics, such as feature-interactions, user-behavior-modeling, multi-task modeling, cross-domain modeling, AutoML, etc.</li>
+                <li><a href="https://github.com/openbenchmark/BARS/blob/master/ctr_prediction/README.md#Benchmark-Datasets" , target="_blank">A collection of public datasets for CTR prediction research</a>, and unique dataset IDs to track specific data partitions of each dataset.</li>
+                <li><a href="https://github.com/xue-pai/FuxiCTR", target="_blank">An open-source library for CTR prediction</a> with stunning features in configurablity, tunablity, and reproduciblity.</li>
+                <li><a href="https://openbenchmark.github.io/ctr-prediction/leaderboard/criteo_x4_001.html", target="_blank">The most comprehensive benchmarking results</a> on tens of SOTA models and datasets. For each result, the detailed reproducing step is available along with the open-source benchmarking code.</li>
             </ul>
 
             <p>The ultimate goal of BARS is to drive more reproducible research in the development of recommender systems.</p>
@@ -56,12 +55,12 @@
     <script src="https://cdn.jsdelivr.net/gh/openbenchmark/openbenchmark.github.io@0.0.1/ctr-prediction/js/main.js"></script>
     <script type="text/javascript" src="./js/nav.js"></script>
     <script type="text/javascript">
-        add_nav("Open-CTR-Benchmark");
-        $(document).ready(function() {
-            $("#fork-btn").click(function() {
-                location.href = "https://github.com/xue-pai/Open-CTR-Benchmark";
-            });
-        });
+        add_nav("CTR Prediction");
+        // $(document).ready(function() {
+        //     $("#fork-btn").click(function() {
+        //         location.href = "https://github.com/xue-pai/Open-CTR-Benchmark";
+        //     });
+        // });
     </script>
 </body>
 
