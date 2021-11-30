@@ -29,7 +29,7 @@ function createModelTable(tableId, dataUrl) {
                         if (row.link != "") {
                             content = '<a href=' + row.link + ' target="_blank">' + row.paper + '</a>, by ' + row.authors + company
                         } else {
-                            content = row.paper + ' by ' + row.authors + company
+                            content = row.paper + ', by ' + row.authors + company
                         }
                     return content
                 }
