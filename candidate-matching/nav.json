@@ -1,7 +1,7 @@
 [
     {
-        "name":"Open-Match-Benchmark",
-        "link":"./index.html"
+        "name":"Candidate Matching",
+        "link":"./"
     },
     {
         "name":"Models",
@@ -13,30 +13,30 @@
         "mode":1
     },
     {
-        "name":"Toolkits",
+        "name":"Tools",
         "link":"https://github.com/xue-pai/Open-Match-Benchmark/blob/master/toolkits.md",
         "mode":1
     },
     {
-        "name": "Benchmarking Result",
+        "name": "SOTA Result",
         "type": "ul",
         "data": [
         {
-            "name":"amazonbooks_x0_001",
-            "link":"./leaderboard/amazonbooks_x0_001.html"
+            "name":"amazonbooks_x0",
+            "link":"./leaderboard/amazonbooks_x0.html"
         },
         {
-            "name":"yelp18_x0_001",
-            "link":"./leaderboard/yelp18_x0_001.html"
+            "name":"yelp18_x0",
+            "link":"./leaderboard/yelp18_x0.html"
         },
         {
-            "name":"gowalla_x0_001",
-            "link":"./leaderboard/gowalla_x0_001.html"
+            "name":"gowalla_x0",
+            "link":"./leaderboard/gowalla_x0.html"
         }]
     }
     ,
     {
-        "name":"Call for contributions",
+        "name":"Contributing",
         "link":"https://github.com/xue-pai/Open-Match-Benchmark/blob/master/CONTRIBUTING.md",
         "mode":1
     },
