@@ -4,16 +4,16 @@
         "link":"./"
     },
     {
-        "name":"Paper List",
+        "name":"Papers",
         "link":"./papers.html"
     },
     {
-        "name":"Dataset Splits",
-        "link":"https://github.com/openbenchmark/BARS/blob/master/ctr_prediction/datasets/README.md",
+        "name":"Datasets",
+        "link":"https://github.com/openbenchmark/BARS/blob/master/ctr_prediction/datasets",
         "mode":1
     },
     {
-        "name":"Source Code",
+        "name":"Code",
         "link":"https://github.com/openbenchmark/BARS/blob/master/ctr_prediction/benchmarks",
         "mode":1
     },
