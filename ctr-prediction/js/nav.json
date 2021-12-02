@@ -4,17 +4,17 @@
         "link":"./"
     },
     {
-        "name":"Papers",
+        "name":"Paper List",
         "link":"./papers.html"
     },
     {
-        "name":"Datasets",
-        "link":"https://github.com/openbenchmark/BARS/blob/master/ctr_prediction/README.md#benchmark-datasets",
+        "name":"Dataset Splits",
+        "link":"https://github.com/openbenchmark/BARS/blob/master/ctr_prediction/datasets/README.md",
         "mode":1
     },
     {
-        "name":"Tools",
-        "link":"https://github.com/openbenchmark/BARS/blob/master/ctr_prediction/README.md#recommended-tools",
+        "name":"Source Code",
+        "link":"https://github.com/openbenchmark/BARS/blob/master/ctr_prediction/benchmarks",
         "mode":1
     },
     {
