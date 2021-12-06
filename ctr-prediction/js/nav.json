@@ -9,12 +9,12 @@
     },
     {
         "name":"Datasets",
-        "link":"https://github.com/openbenchmark/BARS/blob/master/ctr_prediction/datasets",
+        "link":"https://github.com/openbenchmark/BARS/tree/master/ctr_prediction/datasets#benchmark-datasets",
         "mode":1
     },
     {
         "name":"Code",
-        "link":"https://github.com/openbenchmark/BARS/blob/master/ctr_prediction/benchmarks",
+        "link":"https://github.com/openbenchmark/BARS/tree/master/ctr_prediction/benchmarks#benchmark-code",
         "mode":1
     },
     {
@@ -22,20 +22,16 @@
         "type": "ul",
         "data": [
         {
-            "name":"criteo_x4_001",
+            "name":"criteo_x4",
             "link":"./leaderboard/criteo_x4_001.html"
         },
         {
-            "name":"criteo_x4_002",
-            "link":"./leaderboard/criteo_x4_002.html"
-        },
-        {
-            "name":"avazu_x4_001",
+            "name":"avazu_x4",
             "link":"./leaderboard/avazu_x4_001.html"
         },
         {
-            "name":"avazu_x4_002",
-            "link":"./leaderboard/avazu_x4_002.html"
+            "name":"kkbox_x1",
+            "link":"./leaderboard/kkbox_x1.html"
         },
         {
             "name":"avazu_x1",
@@ -44,10 +40,6 @@
         {
             "name":"criteo_x1",
             "link":"./leaderboard/criteo_x1.html"
-        },
-        {
-            "name":"kkbox_x1",
-            "link":"./leaderboard/kkbox_x1.html"
         },
         {
             "name":"taobao_x1",
