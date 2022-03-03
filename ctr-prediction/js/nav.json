@@ -4,17 +4,17 @@
         "link":"./"
     },
     {
-        "name":"Papers",
+        "name":"Paper List",
         "link":"./papers.html"
     },
     {
         "name":"Datasets",
-        "link":"https://github.com/openbenchmark/BARS/tree/master/ctr_prediction/datasets#benchmark-datasets",
+        "link":"https://github.com/openbenchmark/BARS/tree/master/ctr_prediction/datasets",
         "mode":1
     },
     {
-        "name":"Code",
-        "link":"https://github.com/openbenchmark/BARS/tree/master/ctr_prediction/benchmarks#benchmark-code",
+        "name":"Models",
+        "link":"https://github.com/openbenchmark/BARS/tree/master/ctr_prediction/benchmarks",
         "mode":1
     },
     {
@@ -30,24 +30,24 @@
             "link":"./leaderboard/avazu_x4_001.html"
         },
         {
-            "name":"kkbox_x1",
-            "link":"./leaderboard/kkbox_x1.html"
+            "name":"criteo_x1",
+            "link":"./leaderboard/criteo_x1.html"
         },
         {
             "name":"avazu_x1",
             "link":"./leaderboard/avazu_x1.html"
         },
         {
-            "name":"criteo_x1",
-            "link":"./leaderboard/criteo_x1.html"
+            "name":"kkbox_x1",
+            "link":"./leaderboard/kkbox_x1.html"
         },
         {
-            "name":"taobao_x1",
-            "link":"./leaderboard/taobao_x1.html"
+            "name":"frappe_x1",
+            "link":"./leaderboard/frappe_x1.html"
         },
         {
-            "name":"microvideo1.7m_x1",
-            "link":"./leaderboard/microvideo1.7m_x1.html"
+            "name":"movielenslatest_x1",
+            "link":"./leaderboard/movielenslatest_x1.html"
         }
     ]
     }

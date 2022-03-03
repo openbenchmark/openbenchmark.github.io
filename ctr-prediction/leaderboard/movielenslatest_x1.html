@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>BARS-CTR Benchmark | Criteo_x1</title>
+    <title>BARS-CTR Benchmark | Movielenslatest_x1</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -24,7 +24,8 @@
             </div>
             <div class="p-4 pt-5">
                 <h1><a href="https://openbenchmark.github.io/BARS" class="logo">BARS</a></h1>
-                <ul class="list-unstyled components mb-5 no-bullet" id="nav_ul"></ul>
+                <ul class="list-unstyled components mb-5 no-bullet" id="nav_ul">
+                </ul>
                 <div class="mb-5">
                     <img src="../../BARS/img/wechat.jpg" title="Join Wechat Group">
                     <div style="padding-top:2px">
@@ -34,8 +35,8 @@
         </nav>
 
         <div id="content" class="p-4 p-md-5 pt-5">
-            <h2 class="mb-4">Benchmarking on criteo_x1</a></h2>
-            <p>See benchmark protocol: <a href="https://github.com/openbenchmark/BARS/blob/master/ctr_prediction/datasets/Criteo#Criteo_x1">criteo_x1</a><br></p>
+            <h2 class="mb-4">Benchmarking on movielenslatest_x1</a></h2>
+            <p>See benchmark protocol: <a href="https://github.com/openbenchmark/BARS/blob/master/ctr_prediction/datasets/MovieLens#movielenslatest_x1">movielenslatest_x1</a><br></p>
             <!-- Add tables and charts -->
             <div id="chart1"></div>
             <p><br><i>Reminder: one can sort the table by clicking on column headers, or filter the results by searching keywords.</i></p>
@@ -43,6 +44,10 @@
 
         </div>
     </div>
+    <script type="text/javascript" src="../js/nav.js"></script>
+    <script type="text/javascript">
+        add_nav("movielenslatest_x1");
+    </script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script
         src="https://cdn.jsdelivr.net/gh/openbenchmark/openbenchmark.github.io@0.0.1/ctr-prediction/js/popper.js"></script>
@@ -51,19 +56,14 @@
     <script
         src="https://cdn.jsdelivr.net/gh/openbenchmark/openbenchmark.github.io@0.0.1/ctr-prediction/js/main.js"></script>
 
-    <script type="text/javascript" src="../js/nav.js"></script>
-    <script type="text/javascript">
-        add_nav("criteo_x1");
-    </script>
     <script src="https://cdn.datatables.net/r/zf-5.5.2/jqc-1.11.3,dt-1.10.8/datatables.min.js"></script>
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/no-data-to-display.js"></script>
     <script src="../js/tablecharts.js"></script>
     <script type="text/javascript">
         $(document).ready(createTableChart('table1', 'chart1',
-            "https://cdn.jsdelivr.net/gh/openbenchmark/BARS/ctr_prediction/leaderboard/criteo_x1.json"));
+            "https://cdn.jsdelivr.net/gh/openbenchmark/BARS/ctr_prediction/leaderboard/movielenslatest_x1.json"));
     </script>
-
 </body>
 
 </html>

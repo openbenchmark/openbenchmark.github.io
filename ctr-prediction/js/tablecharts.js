@@ -136,7 +136,7 @@ function plotChart(data, chartId) {
 
     Highcharts.chart(chartId, {
         title: {
-            text: "Benchmarking Results of Existing Models"
+            text: "Benchmarking Results"
         },
 
         subtitle: {
