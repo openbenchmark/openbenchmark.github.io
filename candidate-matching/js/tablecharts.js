@@ -71,11 +71,7 @@ function createTableChart(tableId, chartId, dataUrl) {
             { "data": "model", "title": "Model" },
             { "data": "recall_20", "title": "Recall@20" },
             { "data": "ndcg_20", "title": "NDCG@20" },
-            { "data": "hit_rate_20", "title": "HitRate@20" },
-            { "data": "recall_50", "title": "Recall@50" },
-            { "data": "ndcg_50", "title": "NDCG@50" },
-            { "data": "hit_rate_50", "title": "HitRate@50" },
-
+            { "data": "hitrate_20", "title": "HitRate@20" },
             {
                 "data": "link",
                 "title": "Reproducing-Steps",
@@ -87,14 +83,13 @@ function createTableChart(tableId, chartId, dataUrl) {
                 }
             },
             {
-                "data": "contr",
                 "title": "Contributor",
                 render: function(data, type, row, meta) {
-
-                    // if (type === 'display') {
-                    //     data = '<a href=https://github.com/' + data + ' target="_blank">' + data + '</a>';
-                    // }
-                    return data;
+                    var content = row.contr
+                    if (type === 'display') {
+                        content = '<a href=' + row.contr_url + ' target="_blank">' + row.contr + '</a>';
+                    }
+                    return content;
                 }
             }
         ],
