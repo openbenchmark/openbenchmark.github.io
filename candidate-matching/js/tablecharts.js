@@ -19,34 +19,32 @@ function createModelTable(tableId, dataUrl) {
             {
                 "title": "Paper",
                 render: function(data, type, row, meta) {
+
                     var company = ""
                     var content = row.paper
-
                     if (row.company != "") {
                         company = '&nbsp;&nbsp;&nbsp;<i class="fa fa-flag-checkered fa-lg" aria-hidden="true" style="color:#c70404"></i> <strong>' + row.company + '</strong>';
                     }
                     if (type === 'display')
                         if (row.link != "") {
-                            content = '<a href="' + row.link + '" target="_blank">' + row.paper + '</a>, by ' + row.authors + company
+                            content = '<a href=' + row.link + ' target="_blank">' + row.paper + '</a>, by ' + row.authors + company
                         } else {
-                            content = row.paper + ' by ' + row.authors + company
+                            content = row.paper + ', by ' + row.authors + company
                         }
-                        // console.log(row.paper)
-                        // console.log(content)
                     return content
-                        // return type === 'display' ?
-                        // '<a href="' + row.link + '" target="_blank">' + row.paper + '</a>, by ' + row.authors + company : row.paper;
                 }
             },
+            { "data": "tags", "title": "Tags" },
             {
-                "data": "available",
-                "title": "Available",
+                "data": "code",
+                "title": "Code",
                 render: function(data, type, row, meta) {
-                    return type === 'display' && data == "Y" ?
-                        '<i class="fa fa-check-square-o fa-lg" aria-hidden="true" style="color:#058f03"></i>' : "";
+                    if (data != '' & type === 'display') {
+                        data = '<a href=' + data + ' target="_blank"><i class="fa fa-external-link fa-lg" aria-hidden="true" style="color:#058f03"></i></a>';
+                    }
+                    return data;
                 }
-            },
-            { "data": "tags", "title": "Tags" }
+            }
         ]
     });
 }
@@ -72,11 +70,11 @@ function createTableChart(tableId, chartId, dataUrl) {
             { "data": "pub", "title": "Publication" },
             { "data": "model", "title": "Model" },
             { "data": "recall_20", "title": "Recall@20" },
-            { "data": "recall_50", "title": "Recall@50" },
             { "data": "ndcg_20", "title": "NDCG@20" },
+            { "data": "hit_rate_20", "title": "HitRate@20" },
+            { "data": "recall_50", "title": "Recall@50" },
             { "data": "ndcg_50", "title": "NDCG@50" },
-            { "data": "hit_rate_20", "title": "Hit Rate@20" },
-            { "data": "hit_rate_50", "title": "Hit Rate@50" },
+            { "data": "hit_rate_50", "title": "HitRate@50" },
 
             {
                 "data": "link",
@@ -145,7 +143,7 @@ function plotChart(data, chartId) {
 
     Highcharts.chart(chartId, {
         title: {
-            text: "Benchmarking Results of Existing Models"
+            text: "Benchmarking Results"
         },
 
         subtitle: {
