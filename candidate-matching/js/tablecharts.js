@@ -10,7 +10,7 @@ function createModelTable(tableId, dataUrl) {
             "dataSrc": "data"
         },
         "order": [
-            [0, "desc"]
+            [0, "desc"], [1, "asc"]
         ],
         "columns": [
             { "data": "year", "title": "Year" },

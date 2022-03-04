@@ -10,7 +10,7 @@ function createModelTable(tableId, dataUrl) {
             "dataSrc": "data"
         },
         "order": [
-            [0, "desc"]
+            [0, "desc"], [1, "asc"]
         ],
         "columns": [
             { "data": "year", "title": "Year" },
@@ -81,16 +81,7 @@ function createTableChart(tableId, chartId, dataUrl) {
                     return data;
                 }
             },
-            {
-                "title": "Contributor",
-                render: function(data, type, row, meta) {
-                    var content = row.contr
-                    if (type === 'display') {
-                        content = '<a href=' + row.contr_url + ' target="_blank">' + row.contr + '</a>';
-                    }
-                    return content;
-                }
-            }
+
         ],
         "drawCallback": function(settings) {
             var table = this.api();
