@@ -18,12 +18,12 @@
         "mode":1
     },
     {
-        "name": "SOTA Results",
+        "name": "Leaderboard",
         "type": "ul",
         "data": [
         {
-            "name":"criteo_x4",
-            "link":"./leaderboard/criteo_x4_001.html"
+            "name":"avazu_x1",
+            "link":"./leaderboard/avazu_x1.html"
         },
         {
             "name":"avazu_x4",
@@ -34,16 +34,16 @@
             "link":"./leaderboard/criteo_x1.html"
         },
         {
-            "name":"avazu_x1",
-            "link":"./leaderboard/avazu_x1.html"
-        },
-        {
-            "name":"kkbox_x1",
-            "link":"./leaderboard/kkbox_x1.html"
+            "name":"criteo_x4",
+            "link":"./leaderboard/criteo_x4_001.html"
         },
         {
             "name":"frappe_x1",
             "link":"./leaderboard/frappe_x1.html"
+        },
+        {
+            "name":"kkbox_x1",
+            "link":"./leaderboard/kkbox_x1.html"
         },
         {
             "name":"movielenslatest_x1",

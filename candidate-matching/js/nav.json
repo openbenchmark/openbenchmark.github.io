@@ -18,7 +18,7 @@
         "mode":1
     },
     {
-        "name": "SOTA Results",
+        "name": "Leaderboard",
         "type": "ul",
         "data": [
         {
@@ -26,12 +26,12 @@
             "link":"./leaderboard/amazonbooks_x1.html"
         },
         {
-            "name":"yelp18_x1",
-            "link":"./leaderboard/yelp18_x1.html"
-        },
-        {
             "name":"gowalla_x1",
             "link":"./leaderboard/gowalla_x1.html"
+        },
+        {
+            "name":"yelp18_x1",
+            "link":"./leaderboard/yelp18_x1.html"
         }]
     },
     {
