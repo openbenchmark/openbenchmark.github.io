@@ -74,7 +74,7 @@ function createTableChart(tableId, chartId, dataUrl) {
             { "data": "hitrate_20", "title": "HitRate@20" },
             {
                 "data": "link",
-                "title": "Reproducing-Steps",
+                "title": "Reproduce-Steps",
                 render: function(data, type, row, meta) {
                     if (data != '' & type === 'display') {
                         data = '<a href=' + data + ' target="_blank"><i class="fa fa-external-link fa-lg" aria-hidden="true" style="color:#058f03"></i></a>';
