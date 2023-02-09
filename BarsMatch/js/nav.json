@@ -9,12 +9,12 @@
     },
     {
         "name":"Datasets",
-        "link":"https://github.com/openbenchmark/BARS/tree/master/candidate_matching/datasets",
+        "link":"https://github.com/openbenchmark/BARS/tree/master/datasets#datasets",
         "mode":1
     },
     {
         "name":"Models",
-        "link":"https://github.com/openbenchmark/BARS/tree/master/candidate_matching/benchmarks",
+        "link":"https://github.com/openbenchmark/BARS/tree/master/BarsMatch/benchmarks",
         "mode":1
     },
     {

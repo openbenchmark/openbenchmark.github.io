@@ -9,12 +9,12 @@
     },
     {
         "name":"Datasets",
-        "link":"https://github.com/openbenchmark/BARS/tree/master/ctr_prediction/datasets",
+        "link":"https://github.com/openbenchmark/BARS/tree/master/datasets#datasets",
         "mode":1
     },
     {
         "name":"Models",
-        "link":"https://github.com/openbenchmark/BARS/tree/master/ctr_prediction/benchmarks",
+        "link":"https://github.com/openbenchmark/BARS/tree/master/BarsCTR/benchmarks",
         "mode":1
     },
     {
