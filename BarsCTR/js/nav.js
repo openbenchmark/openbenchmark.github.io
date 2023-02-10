@@ -54,7 +54,7 @@ function add_nav_ul(name, data, page_name) {
 
 function add_nav(page_name) {
     // load nav json data 
-    var nav_json = "https://openbenchmark.github.io/BarsCTR/js/nav.json"
+    var nav_json = "https://openbenchmark.github.io/BarsCTR/js/nav_xxxxx.json"
     var request = new XMLHttpRequest();
     request.open("get", nav_json);
     request.send(null);
