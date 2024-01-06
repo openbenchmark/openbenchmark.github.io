@@ -1,4 +1,0 @@
-# Benchmark Leaderboard
-
-```{tableofcontents}
-```
