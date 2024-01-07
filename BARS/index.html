@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
@@ -44,6 +44,7 @@
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
@@ -66,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="CTR Prediction" href="CTR/papers.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -165,11 +166,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="CTR/leaderboard/criteo_x1.html">Criteo_x1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CTR/leaderboard/criteo_x4.html">Criteo_x4</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CTR/leaderboard/frappe_x1.html">Frappe_x1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CTR/leaderboard/movielenslatest_x1.html">MovielensLatest_x1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CTR/leaderboard/kkbox_x1.html">KKBox_x1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CTR/leaderboard/amazonelectronics_x1.html">AmazonElectronics_x1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CTR/leaderboard/taobaoad_x1.html">TaobaoAd_x1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CTR/leaderboard/kuaivideo_x1.html">KuaiVideo_x1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CTR/leaderboard/microvideo1.7m_x1.html">MicroVideo1.7M_x1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CTR/leaderboard/movielenslatest_x1.html">MovielensLatest_x1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CTR/leaderboard/taobaoad_x1.html">TaobaoAd_x1</a></li>
 </ul>
 </li>
 </ul>
@@ -365,12 +367,12 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="welcome-to-bars">
-<h1>Welcome to BARS<a class="headerlink" href="#welcome-to-bars" title="Permalink to this headline">#</a></h1>
+<h1>Welcome to BARS<a class="headerlink" href="#welcome-to-bars" title="Permalink to this heading">#</a></h1>
 <p>BARS is a project aimed for open BenchmArking for Recommender Systems <a class="reference external" href="https://openbenchmark.github.io/BARS">https://openbenchmark.github.io/BARS</a></p>
 <p>Despite the significant progress made in both research and practice of recommender systems over the past two decades, there is a lack of a widely-recognized benchmark in this field. This not only increases the difficulty in reproducing existing studies, but also incurs inconsistent experimental results among them, which largely limit the practical value and potential impact of research in this field.</p>
 <p>Openness is key to fostering progress in scientific research. BARS is such a project aimed for open BenchmArking for Recommender Systems, allowing better reproducibility and replicability of quantitative research results. The ultimate goal of BARS is to drive more reproducible research in the development of recommender systems.</p>
 <section id="key-features">
-<h2>Key Features<a class="headerlink" href="#key-features" title="Permalink to this headline">#</a></h2>
+<h2>Key Features<a class="headerlink" href="#key-features" title="Permalink to this heading">#</a></h2>
 <p>In summary, BARS is built with the following key features:</p>
 <ul class="simple">
 <li><p><strong>Open datasets</strong>: BARS collects a set of widely-used public datasets for recommendation research, and assign unique dataset IDs to track different data splits of each dataset. This allows researchers to experiment with the datasets and share the results in a consistent way.</p></li>
@@ -389,7 +391,7 @@ document.write(`
 <p>By establishing an open benchmarking standard, together with the freely available datasets, source code, and reproducing steps, we hope that the BARS project could benefit all researchers, practitioners, and educators in the community.</p>
 </section>
 <section id="benchmark-tasks">
-<h2>Benchmark Tasks<a class="headerlink" href="#benchmark-tasks" title="Permalink to this headline">#</a></h2>
+<h2>Benchmark Tasks<a class="headerlink" href="#benchmark-tasks" title="Permalink to this heading">#</a></h2>
 <p>The BARS benchmark currently covers the following two main recommendation tasks.</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://openbenchmark.github.io/BARS/CTR">BARS-CTR: An Open Benchmark for CTR Prediction</a></p></li>
@@ -402,14 +404,14 @@ document.write(`
 </ul>
 </section>
 <section id="citation">
-<h2>Citation<a class="headerlink" href="#citation" title="Permalink to this headline">#</a></h2>
+<h2>Citation<a class="headerlink" href="#citation" title="Permalink to this heading">#</a></h2>
 <p>If you find our benchmarks helpful in your research, please kindly cite the following papers.</p>
 <ul class="simple">
 <li><p>Jieming Zhu, Quanyu Dai, Liangcai Su, Rong Ma, Jinyang Liu, Guohao Cai, Xi Xiao, Rui Zhang. <a class="reference external" href="https://arxiv.org/abs/2205.09626">BARS: Towards Open Benchmarking for Recommender Systems</a>. The 45th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR), 2022. [<a class="reference external" href="https://dblp.org/rec/conf/sigir/ZhuDSMLCXZ22.html?view=bibtex">Bibtex</a>]</p></li>
 </ul>
 </section>
 <section id="discussion">
-<h2>Discussion<a class="headerlink" href="#discussion" title="Permalink to this headline">#</a></h2>
+<h2>Discussion<a class="headerlink" href="#discussion" title="Permalink to this heading">#</a></h2>
 <p>If you have any questions or feedback about the BARS benchamrk, please <a class="reference external" href="https://github.com/reczoo/BARS/discussions/new">start a discussion here</a>, or join our WeChat group.</p>
 <p><img alt="Scan QR code" src="_images/wechat.jpg" /></p>
 </section>
